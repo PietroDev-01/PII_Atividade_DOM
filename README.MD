@@ -30,7 +30,7 @@ Cada exercício está contido em sua própria pasta, nomeada `exercicio-XX`.
 
 1.  Clone este repositório:
     ```bash
-    git clone <URL_DO_REPOSITORIO>
+    git clone https://github.com/PietroDev-01/PII_Atividade_DOM.git
     ```
 2.  Navegue até a pasta do exercício que deseja visualizar:
     ```bash
