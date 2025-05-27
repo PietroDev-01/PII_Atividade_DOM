@@ -1,0 +1,42 @@
+<!-- 11) Pesquise como criar elementos e adicione o conteúdo de uma caixa de texto em uma lista não ordenada. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Itens à Lista</title>
+</head>
+<body>
+    <input type="text" id="novoItem" placeholder="Digite um item">
+    <button onclick="adicionarItem()">Adicionar à Lista</button>
+    
+    <ul id="minhaLista">
+        <li>Primeiro item</li>
+    </ul>
+
+    <script>
+        function adicionarItem() {
+            // Pega o valor da caixa de texto
+            var textoItem = document.getElementById("novoItem").value;
+
+            if (textoItem.trim() !== "") {
+                // Cria um novo elemento <li> (item de lista)
+                var novoLi = document.createElement("li");
+
+                // Cria um nó de texto com o valor da caixa de texto
+                var conteudo = document.createTextNode(textoItem);
+
+                // Adiciona o nó de texto ao novo elemento <li>
+                novoLi.appendChild(conteudo);
+
+                // Seleciona a lista <ul> e adiciona o novo <li> a ela
+                document.getElementById("minhaLista").appendChild(novoLi);
+
+                // Limpa a caixa de texto
+                document.getElementById("novoItem").value = "";
+            } else {
+                alert("Por favor, digite algo para adicionar à lista.");
+            }
+        }
+    </script>
+</body>
+</html>

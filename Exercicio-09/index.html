@@ -1,0 +1,29 @@
+<!-- 9) Crie um script acionado por botões que aumentem o tamanho do texto de toda a página e outro que faça o contrário.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acessibilidade de Fonte</title>
+</head>
+<body>
+    <h1>Título da Página</h1>
+    <p>Este é um parágrafo de exemplo para testar o aumento e a diminuição da fonte.</p>
+    <div>
+        <p>Outro parágrafo dentro de uma div.</p>
+    </div>
+
+    <button onclick="alterarFonte(1)">Aumentar Fonte</button>
+    <button onclick="alterarFonte(-1)">Diminuir Fonte</button>
+
+    <script>
+        function alterarFonte(fator) {
+            var elementos = document.getElementsByTagName('*');
+            for (var i = 0; i < elementos.length; i++) {
+                var estilo = window.getComputedStyle(elementos[i], null).getPropertyValue('font-size');
+                var tamanhoAtual = parseFloat(estilo);
+                elementos[i].style.fontSize = (tamanhoAtual + fator) + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

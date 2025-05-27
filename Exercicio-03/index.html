@@ -1,0 +1,35 @@
+<!-- 3) Crie um código que conte o número de parágrafos dentro de uma div e exiba o resultado em uma outra div. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador de Parágrafos</title>
+</head>
+<body>
+    <div id="container">
+        <p>Este é o primeiro parágrafo.</p>
+        <p>Este é o segundo parágrafo.</p>
+        <span>Isto não é um parágrafo.</span>
+        <p>Este é o terceiro parágrafo.</p>
+    </div>
+
+    <button onclick="contar()">Contar Parágrafos</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function contar() {
+            // Seleciona a div principal
+            var container = document.getElementById("container");
+            // Seleciona todos os parágrafos dentro da div principal
+            var paragrafos = container.getElementsByTagName("p");
+            // Conta o número de parágrafos
+            var numeroDeParagrafos = paragrafos.length;
+            // Seleciona a div de resultado
+            var divResultado = document.getElementById("resultado");
+            // Exibe o resultado na div
+            divResultado.textContent = "O número de parágrafos é: " + numeroDeParagrafos;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 8) Crie um script acionado por botões que aumentem o tamanho do texto de toda a página e outro que faça o contrário. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alto Contraste</title>
+</head>
+<body>
+    <h1>Página de Exemplo</h1>
+    <p>Este é um parágrafo com texto normal.</p>
+
+    <button onclick="altoContraste()">Alto Contraste</button>
+    <button onclick="resetarCores()">Resetar Cores</button>
+
+    <script>
+        // Guarda as cores originais
+        var corFundoOriginal = document.body.style.backgroundColor;
+        var corTextoOriginal = document.body.style.color;
+
+        function altoContraste() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        }
+
+        function resetarCores() {
+            document.body.style.backgroundColor = corFundoOriginal;
+            document.body.style.color = corTextoOriginal;
+        }
+    </script>
+</body>
+</html>

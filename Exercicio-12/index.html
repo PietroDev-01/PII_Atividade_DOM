@@ -1,0 +1,44 @@
+<!-- 12) Repita o exercício anterior adicionando o conteúdo da caixa de texto em um elemento de um select. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Itens ao Select</title>
+</head>
+<body>
+    <input type="text" id="novaOpcao" placeholder="Digite uma opção">
+    <button onclick="adicionarOpcao()">Adicionar ao Select</button>
+    <br><br>
+
+    <select id="meuSelect">
+        <option>Opção 1</option>
+    </select>
+
+    <script>
+        function adicionarOpcao() {
+            // Pega o valor da caixa de texto
+            var textoOpcao = document.getElementById("novaOpcao").value;
+
+            if (textoOpcao.trim() !== "") {
+                // Seleciona o elemento <select>
+                var select = document.getElementById("meuSelect");
+
+                // Cria um novo elemento <option>
+                var novaOption = document.createElement("option");
+
+                // Define o texto e o valor da nova opção
+                novaOption.textContent = textoOpcao;
+                novaOption.value = textoOpcao.toLowerCase().replace(/\s/g, ''); // cria um valor sem espaços
+
+                // Adiciona a nova <option> ao <select>
+                select.appendChild(novaOption);
+
+                // Limpa a caixa de texto
+                document.getElementById("novaOpcao").value = "";
+            } else {
+                alert("Por favor, digite algo para adicionar ao select.");
+            }
+        }
+    </script>
+</body>
+</html>

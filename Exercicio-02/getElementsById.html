@@ -1,0 +1,21 @@
+<!-- Este método seleciona um elemento único na página com base em seu id. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo getElementById</title>
+</head>
+<body>
+    <p id="paragrafoUnico">Este é o parágrafo original.</p>
+    <button onclick="mudarTexto()">Mudar Texto</button>
+
+    <script>
+        function mudarTexto() {
+            // Seleciona o parágrafo pelo seu id
+            var paragrafo = document.getElementById("paragrafoUnico");
+            // Altera o texto do parágrafo
+            paragrafo.textContent = "O texto foi alterado com sucesso!";
+        }
+    </script>
+</body>
+</html>

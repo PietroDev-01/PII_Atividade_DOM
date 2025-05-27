@@ -1,0 +1,27 @@
+<!-- 7) Crie um código que tenha um botão de alto contraste que alterne a cor de fundo do body para preto e a cor do texto para branco. Adicionalmente, crie um botão para resetar as cores originais.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copiar e Converter para Caixa Alta</title>
+</head>
+<body>
+    <label for="caixa1">Digite algo:</label>
+    <input type="text" id="caixa1" onkeyup="copiarTexto()">
+
+    <br><br>
+
+    <label for="caixa2">Texto em caixa alta:</label>
+    <input type="text" id="caixa2" readonly>
+
+    <script>
+        function copiarTexto() {
+            // Seleciona as duas caixas de texto
+            var caixa1 = document.getElementById("caixa1");
+            var caixa2 = document.getElementById("caixa2");
+            // Pega o valor da primeira caixa, converte para maiúsculas e atribui à segunda
+            caixa2.value = caixa1.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

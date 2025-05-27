@@ -1,0 +1,25 @@
+<!-- 6) Crie um exemplo em que uma propriedade CSS de um elemento HTML é alterada via DOM.
+Esse exemplo muda a cor e o tamanho da fonte de um titulo ao clicar no botão -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alterando CSS com DOM</title>
+</head>
+<body>
+    <h1 id="tituloPrincipal">Título Original</h1>
+    <button onclick="alterarEstilo()">Alterar Estilo</button>
+
+    <script>
+        function alterarEstilo() {
+            var titulo = document.getElementById("tituloPrincipal");
+            // Altera a propriedade color do estilo do elemento
+            titulo.style.color = "blue";
+            // Altera a propriedade fontSize do estilo do elemento
+            titulo.style.fontSize = "3em";
+            // Altera a propriedade text-decoration
+            titulo.style.textDecoration = "underline";
+        }
+    </script>
+</body>
+</html>

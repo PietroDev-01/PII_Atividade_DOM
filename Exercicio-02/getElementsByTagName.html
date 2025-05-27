@@ -1,0 +1,26 @@
+<!-- O método getElementsByTagName é usado para selecionar elementos HTML por suas tags.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo getElementsByTagName</title>
+</head>
+<body>
+    <p>Primeiro parágrafo.</p>
+    <p>Segundo parágrafo.</p>
+    <p>Terceiro parágrafo.</p>
+    <button onclick="destacarParagrafos()">Destacar Parágrafos</button>
+
+    <script>
+        function destacarParagrafos() {
+            // Seleciona todos os elementos <p>
+            var paragrafos = document.getElementsByTagName("p");
+            // Itera sobre a coleção e altera o estilo de cada parágrafo
+            for (var i = 0; i < paragrafos.length; i++) {
+                paragrafos[i].style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>
